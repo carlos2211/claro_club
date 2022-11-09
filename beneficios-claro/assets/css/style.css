@@ -1,0 +1,207 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+.filtros-container {
+    display:flex;
+    flex-direction: row;
+}
+  /* Reset Select */
+  label {
+    float:left;
+    padding-top: 20px;
+    padding-right: 10px;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border:1px solid #ccc;
+    background: #fff;
+    background-image: none;
+    margin: 0;
+    height:100%;
+    width:100%;
+    padding: 0 0 0 .5em;
+    color: #222;
+    cursor: pointer;
+    transition:all 0.3s ease;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: block;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #fff;
+    border-radius: .25em;
+    float:left;
+    margin:5px;
+  }
+  .select:hover select{
+    background: rgb(241, 241, 241);
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    bottom: 0;
+    padding: 0 1em;
+    background: #fff;
+    pointer-events: none;
+    border-left: 1px solid #ccc;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #ef3829;
+  }
+  .select::after {
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+
+
+.beneficios {
+	display: flex;
+	justify-content: center;
+	flex-flow:row wrap;
+	margin:0 auto;
+	max-width: 1300px;
+}
+
+
+.calugas {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 32%;
+    padding: 0;
+    margin: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e3e3e3;
+    background-color: white;
+    width: 400px;
+    min-height: 378px;
+    box-shadow: 0px 4px 3px #e3e3e3;
+    transition: all .2s ease;
+    margin:10px;
+    position:relative;
+}
+
+.calugas:hover {
+	transform: scale(1.02);
+}
+
+.imagen-fondo {
+	background-image: url(http://via.placeholder.com/400x150);
+	background-position: center;
+	min-height: 150px;
+}
+
+.beneficios .contenido h2 {
+	font-size:20px;
+	font-weight: bold;
+	margin: 20px 10px;
+}
+
+.beneficios .contenido p {
+	font-size: 16px;
+	font-weight: 300;
+	margin: 10px 10px;
+}
+
+.boton-beneficio {
+    background-color: #ef3829;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width:92%;
+    font-weight: 400;
+    outline: none;
+    display: block;
+    padding: 16px;
+    position: absolute;
+    bottom:0;
+}
+
+/* PAG */
+
+.paginador {
+    width: 100%;
+    padding: 10px 5px;
+    float: left;
+}
+.mod__catPromo .container .paginador ul {
+    float: right;
+}
+.paginador ul {
+    display: -webkit-box;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    webkit-display: -webkit-flex !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: row;
+    -webkit-box-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+}
+.paginador ul a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    color: #1F97AE;
+    padding: 2.5px 8px;
+    cursor: pointer;
+}
+.paginador ul li.active a, .paginador ul li:hover a {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    color: #fff;
+    background: #1F97AE;
+}
+ol, ul {
+    list-style: none;
+}
+
+/* PAG */
+@media (max-width: 480px) {
+    .filtros-container {
+        display:flex;
+        flex-direction: column;
+    }
+    .select{
+        width: 96% !important;
+    }
+    label {
+        float:left;
+        padding-left: 5px;
+    }
+}

@@ -1,0 +1,1591 @@
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #f4f4f4;
+}
+#root {
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.filtros-container {
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 30px;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 760px) {
+  .filtros-container {
+    max-width: 430px;
+  }
+}
+@font-face {
+  font-family: claroicons;
+  src: url(../fonts/claroicons.eot?7yr982#iefix) format("embedded-opentype"),
+    url(../fonts/claroicons.ttf?7yr982) format("truetype"),
+    url(../fonts/claroicons.woff?7yr982) format("woff"),
+    url(../fonts/claroicons.svg?7yr982#claroicons) format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+[class^="ico-"],
+[class*=" ico-"] {
+  font-family: claroicons !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico-airplay:before {
+  content: "\e900";
+  font-family: claroicons;
+}
+.ico-alert-circle:before {
+  content: "\e901";
+  font-family: claroicons;
+}
+.ico-alert-octagon:before {
+  content: "\e902";
+  font-family: claroicons;
+}
+.ico-alert-triangle:before {
+  content: "\e903";
+  font-family: claroicons;
+}
+.ico-align-center:before {
+  content: "\e904";
+  font-family: claroicons;
+}
+.ico-align-justify:before {
+  content: "\e905";
+  font-family: claroicons;
+}
+.ico-align-left:before {
+  content: "\e906";
+  font-family: claroicons;
+}
+.ico-align-right:before {
+  content: "\e907";
+  font-family: claroicons;
+}
+.ico-anchor:before {
+  content: "\e908";
+  font-family: claroicons;
+}
+.ico-aperture:before {
+  content: "\e909";
+  font-family: claroicons;
+}
+.ico-archive:before {
+  content: "\e90a";
+  font-family: claroicons;
+}
+.ico-arrow-down-circle:before {
+  content: "\e90b";
+  font-family: claroicons;
+}
+.ico-arrow-down-left:before {
+  content: "\e90c";
+  font-family: claroicons;
+}
+.ico-arrow-down-right:before {
+  content: "\e90d";
+  font-family: claroicons;
+}
+.ico-arrow-down:before {
+  content: "\e90e";
+  font-family: claroicons;
+}
+.ico-arrow-left-circle:before {
+  content: "\e90f";
+  font-family: claroicons;
+}
+.ico-arrow-left:before {
+  content: "\e910";
+  font-family: claroicons;
+}
+.ico-arrow-right-circle:before {
+  content: "\e911";
+  font-family: claroicons;
+}
+.ico-arrow-right:before {
+  content: "\e912";
+  font-family: claroicons;
+}
+.ico-arrow-up-circle:before {
+  content: "\e913";
+  font-family: claroicons;
+}
+.ico-arrow-up-left:before {
+  content: "\e914";
+  font-family: claroicons;
+}
+.ico-arrow-up-right:before {
+  content: "\e915";
+  font-family: claroicons;
+}
+.ico-arrow-up:before {
+  content: "\e916";
+  font-family: claroicons;
+}
+.ico-at-sign:before {
+  content: "\e917";
+  font-family: claroicons;
+}
+.ico-award:before {
+  content: "\e918";
+  font-family: claroicons;
+}
+.ico-bar-chart-2:before {
+  content: "\e919";
+  font-family: claroicons;
+}
+.ico-bar-chart:before {
+  content: "\e91a";
+  font-family: claroicons;
+}
+.ico-battery-charging:before {
+  content: "\e91b";
+  font-family: claroicons;
+}
+.ico-battery:before {
+  content: "\e91c";
+  font-family: claroicons;
+}
+.ico-bell-off:before {
+  content: "\e91d";
+  font-family: claroicons;
+}
+.ico-bell:before {
+  content: "\e91e";
+  font-family: claroicons;
+}
+.ico-bluetooth:before {
+  content: "\e91f";
+  font-family: claroicons;
+}
+.ico-bold:before {
+  content: "\e920";
+  font-family: claroicons;
+}
+.ico-book-open:before {
+  content: "\e921";
+  font-family: claroicons;
+}
+.ico-book:before {
+  content: "\e922";
+  font-family: claroicons;
+}
+.ico-bookmark:before {
+  content: "\e923";
+  font-family: claroicons;
+}
+.ico-box:before {
+  content: "\e924";
+  font-family: claroicons;
+}
+.ico-briefcase:before {
+  content: "\e925";
+  font-family: claroicons;
+}
+.ico-calendar:before {
+  content: "\e926";
+  font-family: claroicons;
+}
+.ico-camera-off:before {
+  content: "\e927";
+  font-family: claroicons;
+}
+.ico-camera:before {
+  content: "\e928";
+  font-family: claroicons;
+}
+.ico-cast:before {
+  content: "\e929";
+  font-family: claroicons;
+}
+.ico-channel:before {
+  content: "\e92a";
+  font-family: claroicons;
+}
+.ico-check-circle:before {
+  content: "\e92b";
+  font-family: claroicons;
+}
+.ico-check-square:before {
+  content: "\e92c";
+  font-family: claroicons;
+}
+.ico-check:before {
+  content: "\e92d";
+  font-family: claroicons;
+}
+.ico-chevron-down:before {
+  content: "\e92e";
+  font-family: claroicons;
+}
+.ico-chevron-left:before {
+  content: "\e92f";
+  font-family: claroicons;
+}
+.ico-chevron-right:before {
+  content: "\e930";
+  font-family: claroicons;
+}
+.ico-chevron-up:before {
+  content: "\e931";
+  font-family: claroicons;
+}
+.ico-chevrons-down:before {
+  content: "\e932";
+  font-family: claroicons;
+}
+.ico-chevrons-left:before {
+  content: "\e933";
+  font-family: claroicons;
+}
+.ico-chevrons-right:before {
+  content: "\e934";
+  font-family: claroicons;
+}
+.ico-chevrons-up:before {
+  content: "\e935";
+  font-family: claroicons;
+}
+.ico-chrome:before {
+  content: "\e936";
+  font-family: claroicons;
+}
+.ico-circle:before {
+  content: "\e937";
+  font-family: claroicons;
+}
+.ico-clipboard:before {
+  content: "\e938";
+  font-family: claroicons;
+}
+.ico-clock:before {
+  content: "\e939";
+  font-family: claroicons;
+}
+.ico-cloud-drizzle:before {
+  content: "\e93a";
+  font-family: claroicons;
+}
+.ico-cloud-lightning:before {
+  content: "\e93b";
+  font-family: claroicons;
+}
+.ico-cloud-off:before {
+  content: "\e93c";
+  font-family: claroicons;
+}
+.ico-cloud-rain:before {
+  content: "\e93d";
+  font-family: claroicons;
+}
+.ico-cloud-snow:before {
+  content: "\e93e";
+  font-family: claroicons;
+}
+.ico-cloud:before {
+  content: "\e93f";
+  font-family: claroicons;
+}
+.ico-coffee:before {
+  content: "\e940";
+  font-family: claroicons;
+}
+.ico-columns:before {
+  content: "\e941";
+  font-family: claroicons;
+}
+.ico-command:before {
+  content: "\e942";
+  font-family: claroicons;
+}
+.ico-compass:before {
+  content: "\e943";
+  font-family: claroicons;
+}
+.ico-copy:before {
+  content: "\e944";
+  font-family: claroicons;
+}
+.ico-corner-down-left:before {
+  content: "\e945";
+  font-family: claroicons;
+}
+.ico-corner-down-right:before {
+  content: "\e946";
+  font-family: claroicons;
+}
+.ico-corner-left-down:before {
+  content: "\e947";
+  font-family: claroicons;
+}
+.ico-corner-left-up:before {
+  content: "\e948";
+  font-family: claroicons;
+}
+.ico-corner-right-down:before {
+  content: "\e949";
+  font-family: claroicons;
+}
+.ico-corner-right-up:before {
+  content: "\e94a";
+  font-family: claroicons;
+}
+.ico-corner-up-left:before {
+  content: "\e94b";
+  font-family: claroicons;
+}
+.ico-corner-up-right:before {
+  content: "\e94c";
+  font-family: claroicons;
+}
+.ico-cpu:before {
+  content: "\e94d";
+  font-family: claroicons;
+}
+.ico-credit-card:before {
+  content: "\e94e";
+  font-family: claroicons;
+}
+.ico-crop:before {
+  content: "\e94f";
+  font-family: claroicons;
+}
+.ico-crosshair:before {
+  content: "\e950";
+  font-family: claroicons;
+}
+.ico-database:before {
+  content: "\e951";
+  font-family: claroicons;
+}
+.ico-delete:before {
+  content: "\e952";
+  font-family: claroicons;
+}
+.ico-disc:before {
+  content: "\e953";
+  font-family: claroicons;
+}
+.ico-dollar-sign:before {
+  content: "\e954";
+  font-family: claroicons;
+}
+.ico-download:before {
+  content: "\e955";
+  font-family: claroicons;
+}
+.ico-dropdown:before {
+  content: "\e956";
+  font-family: claroicons;
+}
+.ico-droplet:before {
+  content: "\e957";
+  font-family: claroicons;
+}
+.ico-edit-2:before {
+  content: "\e958";
+  font-family: claroicons;
+}
+.ico-edit-3:before {
+  content: "\e959";
+  font-family: claroicons;
+}
+.ico-edit:before {
+  content: "\e95a";
+  font-family: claroicons;
+}
+.ico-external-link:before {
+  content: "\e95b";
+  font-family: claroicons;
+}
+.ico-eye-off:before {
+  content: "\e95c";
+  font-family: claroicons;
+}
+.ico-eye:before {
+  content: "\e95d";
+  font-family: claroicons;
+}
+.ico-facebook:before {
+  content: "\e95e";
+  font-family: claroicons;
+}
+.ico-fast-forward:before {
+  content: "\e95f";
+  font-family: claroicons;
+}
+.ico-file-minus:before {
+  content: "\e960";
+  font-family: claroicons;
+}
+.ico-file-plus:before {
+  content: "\e961";
+  font-family: claroicons;
+}
+.ico-file-text:before {
+  content: "\e962";
+  font-family: claroicons;
+}
+.ico-file:before {
+  content: "\e963";
+  font-family: claroicons;
+}
+.ico-film:before {
+  content: "\e964";
+  font-family: claroicons;
+}
+.ico-filter:before {
+  content: "\e965";
+  font-family: claroicons;
+}
+.ico-flag:before {
+  content: "\e966";
+  font-family: claroicons;
+}
+.ico-folder-minus:before {
+  content: "\e967";
+  font-family: claroicons;
+}
+.ico-folder-plus:before {
+  content: "\e968";
+  font-family: claroicons;
+}
+.ico-folder:before {
+  content: "\e969";
+  font-family: claroicons;
+}
+.ico-frown:before {
+  content: "\e96a";
+  font-family: claroicons;
+}
+.ico-game:before {
+  content: "\e96b";
+  font-family: claroicons;
+}
+.ico-gift:before {
+  content: "\e96c";
+  font-family: claroicons;
+}
+.ico-globe:before {
+  content: "\e96d";
+  font-family: claroicons;
+}
+.ico-gps:before {
+  content: "\e96e";
+  font-family: claroicons;
+}
+.ico-grid:before {
+  content: "\e96f";
+  font-family: claroicons;
+}
+.ico-hard-drive:before {
+  content: "\e970";
+  font-family: claroicons;
+}
+.ico-hash:before {
+  content: "\e971";
+  font-family: claroicons;
+}
+.ico-headphones:before {
+  content: "\e972";
+  font-family: claroicons;
+}
+.ico-heart:before {
+  content: "\e973";
+  font-family: claroicons;
+}
+.ico-help-circle:before {
+  content: "\e974";
+  font-family: claroicons;
+}
+.ico-help:before {
+  content: "\e975";
+  font-family: claroicons;
+}
+.ico-help2:before {
+  content: "\e976";
+  font-family: claroicons;
+}
+.ico-hexagon:before {
+  content: "\e977";
+  font-family: claroicons;
+}
+.ico-home:before {
+  content: "\e978";
+  font-family: claroicons;
+}
+.ico-image:before {
+  content: "\e979";
+  font-family: claroicons;
+}
+.ico-inbox:before {
+  content: "\e97a";
+  font-family: claroicons;
+}
+.ico-info:before {
+  content: "\e97b";
+  font-family: claroicons;
+}
+.ico-instagram:before {
+  content: "\e97c";
+  font-family: claroicons;
+}
+.ico-italic:before {
+  content: "\e97d";
+  font-family: claroicons;
+}
+.ico-key:before {
+  content: "\e97e";
+  font-family: claroicons;
+}
+.ico-layers:before {
+  content: "\e97f";
+  font-family: claroicons;
+}
+.ico-layout:before {
+  content: "\e980";
+  font-family: claroicons;
+}
+.ico-life-buoy:before {
+  content: "\e981";
+  font-family: claroicons;
+}
+.ico-link-2:before {
+  content: "\e982";
+  font-family: claroicons;
+}
+.ico-link:before {
+  content: "\e983";
+  font-family: claroicons;
+}
+.ico-linkedin:before {
+  content: "\e984";
+  font-family: claroicons;
+}
+.ico-list:before {
+  content: "\e985";
+  font-family: claroicons;
+}
+.ico-loader:before {
+  content: "\e986";
+  font-family: claroicons;
+}
+.ico-lock:before {
+  content: "\e987";
+  font-family: claroicons;
+}
+.ico-log-in:before {
+  content: "\e988";
+  font-family: claroicons;
+}
+.ico-log-out:before {
+  content: "\e989";
+  font-family: claroicons;
+}
+.ico-mail:before {
+  content: "\e98a";
+  font-family: claroicons;
+}
+.ico-map-pin:before {
+  content: "\e98b";
+  font-family: claroicons;
+}
+.ico-map:before {
+  content: "\e98c";
+  font-family: claroicons;
+}
+.ico-maximize-2:before {
+  content: "\e98d";
+  font-family: claroicons;
+}
+.ico-maximize:before {
+  content: "\e98e";
+  font-family: claroicons;
+}
+.ico-meh:before {
+  content: "\e98f";
+  font-family: claroicons;
+}
+.ico-menu:before {
+  content: "\e990";
+  font-family: claroicons;
+}
+.ico-message-circle:before {
+  content: "\e991";
+  font-family: claroicons;
+}
+.ico-message-square:before {
+  content: "\e992";
+  font-family: claroicons;
+}
+.ico-mic-off:before {
+  content: "\e993";
+  font-family: claroicons;
+}
+.ico-mic:before {
+  content: "\e994";
+  font-family: claroicons;
+}
+.ico-minimize-2:before {
+  content: "\e995";
+  font-family: claroicons;
+}
+.ico-minimize:before {
+  content: "\e996";
+  font-family: claroicons;
+}
+.ico-minus-circle:before {
+  content: "\e997";
+  font-family: claroicons;
+}
+.ico-minus-square:before {
+  content: "\e998";
+  font-family: claroicons;
+}
+.ico-minus:before {
+  content: "\e999";
+  font-family: claroicons;
+}
+.ico-monitor:before {
+  content: "\e99a";
+  font-family: claroicons;
+}
+.ico-moon:before {
+  content: "\e99b";
+  font-family: claroicons;
+}
+.ico-more-horizontal:before {
+  content: "\e99c";
+  font-family: claroicons;
+}
+.ico-more-vertical:before {
+  content: "\e99d";
+  font-family: claroicons;
+}
+.ico-mouse-pointer:before {
+  content: "\e99e";
+  font-family: claroicons;
+}
+.ico-move:before {
+  content: "\e99f";
+  font-family: claroicons;
+}
+.ico-music:before {
+  content: "\e9a0";
+  font-family: claroicons;
+}
+.ico-navigation-2:before {
+  content: "\e9a1";
+  font-family: claroicons;
+}
+.ico-navigation:before {
+  content: "\e9a2";
+  font-family: claroicons;
+}
+.ico-octagon:before {
+  content: "\e9a3";
+  font-family: claroicons;
+}
+.ico-package:before {
+  content: "\e9a4";
+  font-family: claroicons;
+}
+.ico-paperclip:before {
+  content: "\e9a5";
+  font-family: claroicons;
+}
+.ico-pause-circle:before {
+  content: "\e9a6";
+  font-family: claroicons;
+}
+.ico-pause:before {
+  content: "\e9a7";
+  font-family: claroicons;
+}
+.ico-pen-tool:before {
+  content: "\e9a8";
+  font-family: claroicons;
+}
+.ico-percent:before {
+  content: "\e9a9";
+  font-family: claroicons;
+}
+.ico-phone-call:before {
+  content: "\e9aa";
+  font-family: claroicons;
+}
+.ico-phone-forwarded:before {
+  content: "\e9ab";
+  font-family: claroicons;
+}
+.ico-phone-incoming:before {
+  content: "\e9ac";
+  font-family: claroicons;
+}
+.ico-phone-missed:before {
+  content: "\e9ad";
+  font-family: claroicons;
+}
+.ico-phone-off:before {
+  content: "\e9ae";
+  font-family: claroicons;
+}
+.ico-phone-outgoing:before {
+  content: "\e9af";
+  font-family: claroicons;
+}
+.ico-phone:before {
+  content: "\e9b0";
+  font-family: claroicons;
+}
+.ico-pie-chart:before {
+  content: "\e9b1";
+  font-family: claroicons;
+}
+.ico-play-circle:before {
+  content: "\e9b2";
+  font-family: claroicons;
+}
+.ico-play:before {
+  content: "\e9b3";
+  font-family: claroicons;
+}
+.ico-plus-circle:before {
+  content: "\e9b4";
+  font-family: claroicons;
+}
+.ico-plus-square:before {
+  content: "\e9b5";
+  font-family: claroicons;
+}
+.ico-plus:before {
+  content: "\e9b6";
+  font-family: claroicons;
+}
+.ico-power:before {
+  content: "\e9b7";
+  font-family: claroicons;
+}
+.ico-printer:before {
+  content: "\e9b8";
+  font-family: claroicons;
+}
+.ico-radio:before {
+  content: "\e9b9";
+  font-family: claroicons;
+}
+.ico-rating-g:before {
+  content: "\e9ba";
+  font-family: claroicons;
+}
+.ico-rating-nc-17:before {
+  content: "\e9bb";
+  font-family: claroicons;
+}
+.ico-rating-pg-13:before {
+  content: "\e9bc";
+  font-family: claroicons;
+}
+.ico-rating-pg:before {
+  content: "\e9bd";
+  font-family: claroicons;
+}
+.ico-rating-r:before {
+  content: "\e9be";
+  font-family: claroicons;
+}
+.ico-refresh-ccw:before {
+  content: "\e9bf";
+  font-family: claroicons;
+}
+.ico-refresh-cw:before {
+  content: "\e9c0";
+  font-family: claroicons;
+}
+.ico-repeat:before {
+  content: "\e9c1";
+  font-family: claroicons;
+}
+.ico-rewind:before {
+  content: "\e9c2";
+  font-family: claroicons;
+}
+.ico-rotate-ccw:before {
+  content: "\e9c3";
+  font-family: claroicons;
+}
+.ico-rotate-cw:before {
+  content: "\e9c4";
+  font-family: claroicons;
+}
+.ico-rss:before {
+  content: "\e9c5";
+  font-family: claroicons;
+}
+.ico-save:before {
+  content: "\e9c6";
+  font-family: claroicons;
+}
+.ico-scissors:before {
+  content: "\e9c7";
+  font-family: claroicons;
+}
+.ico-search:before {
+  content: "\e9c8";
+  font-family: claroicons;
+}
+.ico-send:before {
+  content: "\e9c9";
+  font-family: claroicons;
+}
+.ico-server:before {
+  content: "\e9ca";
+  font-family: claroicons;
+}
+.ico-settings:before {
+  content: "\e9cb";
+  font-family: claroicons;
+}
+.ico-share-2:before {
+  content: "\e9cc";
+  font-family: claroicons;
+}
+.ico-share:before {
+  content: "\e9cd";
+  font-family: claroicons;
+}
+.ico-shield-off:before {
+  content: "\e9ce";
+  font-family: claroicons;
+}
+.ico-shield:before {
+  content: "\e9cf";
+  font-family: claroicons;
+}
+.ico-shopping-bag:before {
+  content: "\e9d0";
+  font-family: claroicons;
+}
+.ico-shopping-cart:before {
+  content: "\e9d1";
+  font-family: claroicons;
+}
+.ico-shuffle:before {
+  content: "\e9d2";
+  font-family: claroicons;
+}
+.ico-sidebar:before {
+  content: "\e9d3";
+  font-family: claroicons;
+}
+.ico-skip-back:before {
+  content: "\e9d4";
+  font-family: claroicons;
+}
+.ico-skip-forward:before {
+  content: "\e9d5";
+  font-family: claroicons;
+}
+.ico-slash:before {
+  content: "\e9d6";
+  font-family: claroicons;
+}
+.ico-sliders:before {
+  content: "\e9d7";
+  font-family: claroicons;
+}
+.ico-smartphone:before {
+  content: "\e9d8";
+  font-family: claroicons;
+}
+.ico-smile:before {
+  content: "\e9d9";
+  font-family: claroicons;
+}
+.ico-speaker:before {
+  content: "\e9da";
+  font-family: claroicons;
+}
+.ico-square:before {
+  content: "\e9db";
+  font-family: claroicons;
+}
+.ico-star-full:before {
+  content: "\e9dc";
+  font-family: claroicons;
+}
+.ico-star-half:before {
+  content: "\e9dd";
+  font-family: claroicons;
+}
+.ico-star:before {
+  content: "\e9de";
+  font-family: claroicons;
+}
+.ico-stop-circle:before {
+  content: "\e9df";
+  font-family: claroicons;
+}
+.ico-store:before {
+  content: "\e9e0";
+  font-family: claroicons;
+}
+.ico-sun:before {
+  content: "\e9e1";
+  font-family: claroicons;
+}
+.ico-sunrise:before {
+  content: "\e9e2";
+  font-family: claroicons;
+}
+.ico-sunset:before {
+  content: "\e9e3";
+  font-family: claroicons;
+}
+.ico-tablet:before {
+  content: "\e9e4";
+  font-family: claroicons;
+}
+.ico-tag:before {
+  content: "\e9e5";
+  font-family: claroicons;
+}
+.ico-target:before {
+  content: "\e9e6";
+  font-family: claroicons;
+}
+.ico-thermometer:before {
+  content: "\e9e7";
+  font-family: claroicons;
+}
+.ico-thumbs-down:before {
+  content: "\e9e8";
+  font-family: claroicons;
+}
+.ico-thumbs-up:before {
+  content: "\e9e9";
+  font-family: claroicons;
+}
+.ico-toggle-left:before {
+  content: "\e9ea";
+  font-family: claroicons;
+}
+.ico-toggle-right:before {
+  content: "\e9eb";
+  font-family: claroicons;
+}
+.ico-tool:before {
+  content: "\e9ec";
+  font-family: claroicons;
+}
+.ico-trash-2:before {
+  content: "\e9ed";
+  font-family: claroicons;
+}
+.ico-trash:before {
+  content: "\e9ee";
+  font-family: claroicons;
+}
+.ico-trending-down:before {
+  content: "\e9ef";
+  font-family: claroicons;
+}
+.ico-trending-up:before {
+  content: "\e9f0";
+  font-family: claroicons;
+}
+.ico-triangle:before {
+  content: "\e9f1";
+  font-family: claroicons;
+}
+.ico-truck:before {
+  content: "\e9f2";
+  font-family: claroicons;
+}
+.ico-tv:before {
+  content: "\e9f3";
+  font-family: claroicons;
+}
+.ico-twitter:before {
+  content: "\e9f4";
+  font-family: claroicons;
+}
+.ico-type:before {
+  content: "\e9f5";
+  font-family: claroicons;
+}
+.ico-umbrella:before {
+  content: "\e9f6";
+  font-family: claroicons;
+}
+.ico-underline:before {
+  content: "\e9f7";
+  font-family: claroicons;
+}
+.ico-unlock:before {
+  content: "\e9f8";
+  font-family: claroicons;
+}
+.ico-upload-cloud:before {
+  content: "\e9f9";
+  font-family: claroicons;
+}
+.ico-upload:before {
+  content: "\e9fa";
+  font-family: claroicons;
+}
+.ico-user-check:before {
+  content: "\e9fb";
+  font-family: claroicons;
+}
+.ico-user-love:before {
+  content: "\e9fc";
+  font-family: claroicons;
+}
+.ico-user-minus:before {
+  content: "\e9fd";
+  font-family: claroicons;
+}
+.ico-user-monitor:before {
+  content: "\e9fe";
+  font-family: claroicons;
+}
+.ico-user-phone:before {
+  content: "\e9ff";
+  font-family: claroicons;
+}
+.ico-user-plus:before {
+  content: "\ea00";
+  font-family: claroicons;
+}
+.ico-user-x:before {
+  content: "\ea01";
+  font-family: claroicons;
+}
+.ico-user:before {
+  content: "\ea02";
+  font-family: claroicons;
+}
+.ico-users:before {
+  content: "\ea03";
+  font-family: claroicons;
+}
+.ico-video-off:before {
+  content: "\ea04";
+  font-family: claroicons;
+}
+.ico-video:before {
+  content: "\ea05";
+  font-family: claroicons;
+}
+.ico-voicemail:before {
+  content: "\ea06";
+  font-family: claroicons;
+}
+.ico-volume-1:before {
+  content: "\ea07";
+  font-family: claroicons;
+}
+.ico-volume-2:before {
+  content: "\ea08";
+  font-family: claroicons;
+}
+.ico-volume-x:before {
+  content: "\ea09";
+  font-family: claroicons;
+}
+.ico-volume:before {
+  content: "\ea0a";
+  font-family: claroicons;
+}
+.ico-watch:before {
+  content: "\ea0b";
+  font-family: claroicons;
+}
+.ico-wifi-off:before {
+  content: "\ea0c";
+  font-family: claroicons;
+}
+.ico-wifi:before {
+  content: "\ea0d";
+  font-family: claroicons;
+}
+.ico-wind:before {
+  content: "\ea0e";
+  font-family: claroicons;
+}
+.ico-x-circle:before {
+  content: "\ea0f";
+  font-family: claroicons;
+}
+.ico-x-octagon:before {
+  content: "\ea10";
+  font-family: claroicons;
+}
+.ico-x-square:before {
+  content: "\ea11";
+  font-family: claroicons;
+}
+.ico-x:before {
+  content: "\ea12";
+  font-family: claroicons;
+}
+.ico-youtube:before {
+  content: "\ea13";
+  font-family: claroicons;
+}
+.ico-zap-off:before {
+  content: "\ea14";
+  font-family: claroicons;
+}
+.ico-zap:before {
+  content: "\ea15";
+  font-family: claroicons;
+}
+.ico-zoom-in:before {
+  content: "\ea16";
+  font-family: claroicons;
+}
+.ico-zoom-out:before {
+  content: "\ea17";
+  font-family: claroicons;
+}
+.ico-download-cloud:before {
+  content: "\ea18";
+  font-family: claroicons;
+}
+.ico-facebook-messenger-s:before {
+  content: "\ea19";
+  font-family: claroicons;
+}
+.ico-facebook-s:before {
+  content: "\ea1a";
+  font-family: claroicons;
+}
+.ico-google-plus-s:before {
+  content: "\ea1b";
+  font-family: claroicons;
+}
+.ico-instagram-s:before {
+  content: "\ea1c";
+  font-family: claroicons;
+}
+.ico-linkedin-s:before {
+  content: "\ea1d";
+  font-family: claroicons;
+}
+.ico-pinterest-s:before {
+  content: "\ea1e";
+  font-family: claroicons;
+}
+.ico-skype-s:before {
+  content: "\ea1f";
+  font-family: claroicons;
+}
+.ico-snapchat-s:before {
+  content: "\ea20";
+  font-family: claroicons;
+}
+.ico-spotify-s:before {
+  content: "\ea21";
+  font-family: claroicons;
+}
+.ico-telegram-s:before {
+  content: "\ea22";
+  font-family: claroicons;
+}
+.ico-tinder-s:before {
+  content: "\ea23";
+  font-family: claroicons;
+}
+.ico-twitter-s:before {
+  content: "\ea24";
+  font-family: claroicons;
+}
+.ico-waze-s:before {
+  content: "\ea25";
+  font-family: claroicons;
+}
+.ico-whatsapp-s:before {
+  content: "\ea26";
+  font-family: claroicons;
+}
+.ico-youtube-s:before {
+  content: "\ea27";
+  font-family: claroicons;
+}
+.ico-claro-user:before {
+  content: "\ea28";
+  font-family: claroicons;
+}
+.ico-smartphone2:before {
+  content: "\ea29";
+  font-family: claroicons;
+}
+.ico-1-play-internet:before {
+  content: "\ea2a";
+  font-family: claroicons;
+}
+.ico-1-play-telefono:before {
+  content: "\ea2b";
+  font-family: claroicons;
+}
+.ico-1-play-tv:before {
+  content: "\ea2c";
+  font-family: claroicons;
+}
+.ico-2-play-telefono-internet:before {
+  content: "\ea2d";
+  font-family: claroicons;
+}
+.ico-2-play-tv-internet:before {
+  content: "\ea2e";
+  font-family: claroicons;
+}
+.ico-2-play-tv-telefono:before {
+  content: "\ea2f";
+  font-family: claroicons;
+}
+.ico-3-play:before {
+  content: "\ea30";
+  font-family: claroicons;
+}
+.ico-netflix-s:before {
+  content: "\ea31";
+  font-family: claroicons;
+}
+.ico-tiktok-s:before {
+  content: "\ea32";
+  font-family: claroicons;
+}
+.ico-c-facebook-messenger-s:before {
+  content: "\ea33";
+  font-family: claroicons;
+}
+.ico-c-facebook-s:before {
+  content: "\ea34";
+  font-family: claroicons;
+}
+.ico-c-instagram-s:before {
+  content: "\ea35";
+  font-family: claroicons;
+}
+.ico-c-snapchat-s:before {
+  content: "\ea36";
+  font-family: claroicons;
+}
+.ico-c-telegram-s:before {
+  content: "\ea37";
+  font-family: claroicons;
+}
+.ico-c-tiktok-s:before {
+  content: "\ea38";
+  font-family: claroicons;
+}
+.ico-c-twitter-s:before {
+  content: "\ea39";
+  font-family: claroicons;
+}
+.ico-c-waze-s:before {
+  content: "\ea3a";
+  font-family: claroicons;
+}
+.ico-c-whatsapp-s:before {
+  content: "\ea3b";
+  font-family: claroicons;
+}
+.ico-c-youtube-s:before {
+  content: "\ea3c";
+  font-family: claroicons;
+}
+.ico-twitch-s:before {
+  content: "\e95e";
+  font-family: claroicons;
+}
+.ico-facebook-app:before {
+  content: "\e97c";
+  font-family: claroicons;
+}
+.beneficios {
+  display: flex;
+  max-width: 1300px;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 30px;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  -webkit-box-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  flex-direction: row;
+}
+article.card {
+  display: flex;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.c12Item {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  width: 100%;
+}
+.cardPromo {
+  -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 4px 0 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px #00000026;
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 380px;
+}
+.cardPromo .cardPromoImg {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+.cardPromoImg img {
+  max-width: 100%;
+  height: auto;
+}
+.cardPromo .cardPromoCont {
+  padding: 20px 20px 32px;
+}
+.cardPromo .cardPromoCont .cardPromoTitle {
+  margin-bottom: 20px;
+}
+.cardPromoTitle h3 {
+  margin: 0.2rem 0;
+}
+.cardPromoTitle p {
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.btn.withIco {
+  padding-left: 50px;
+}
+.btn.withIco {
+  padding-left: 50px;
+  padding-right: 20px;
+}
+a.btn,
+button.btn {
+  padding: 9px 20px;
+}
+.btn {
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  border-radius: 20px;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  width: auto;
+  height: 40px;
+  padding: 13px 20px;
+  background-color: transparent;
+  border: 1px solid #da291c;
+  cursor: pointer;
+}
+.btn,
+.textLink {
+  position: relative;
+  display: inline-block;
+}
+.btn.btnBlancoRojo {
+  color: #da291c;
+  background-color: transparent;
+  border-color: #da291c;
+}
+.btn.btnBlancoRojo:hover {
+  color: #fff;
+  background-color: #da291c;
+}
+.btn.withIco i {
+  font-size: 22px;
+  font-size: 1.375rem;
+  position: absolute;
+  top: 8px;
+  margin-left: -32px;
+}
+.btn.withIco span {
+  display: inline-block;
+}
+[class^="ico-"],
+[class*=" ico-"] {
+  font-family: claroicons !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media only screen and (min-width: 1200px) {
+  article.card {
+    width: 33%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  article.card {
+    width: 100%;
+  }
+}
+.not-found {
+  -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 4px 0 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px #00000026;
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 380px;
+  padding: 3rem;
+}
+.not-found p {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.navegacion {
+  list-style: none;
+  display: flex;
+  width: 400px;
+  justify-content: center;
+  gap: 2px;
+  margin: 0 auto;
+  padding: 0;
+}
+.page-number {
+  cursor: pointer;
+  border: 1px solid #a0a0a0;
+  border-radius: 15px;
+  margin: 4px;
+  width: 18px;
+  line-height: initial;
+  padding: 5px;
+  vertical-align: baseline;
+  text-align: center;
+  list-style: none;
+  background-color: #fff;
+}
+.page-number.active {
+  border-color: #d80707;
+  font-weight: 700;
+  color: #d80707;
+}
+.c12BarSearch {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 16px;
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+.buscador-input {
+  box-sizing: border-box;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  padding: 10px 16px 10px 46px;
+  width: 70%;
+  border-radius: 12px;
+  font-size: 1rem;
+  position: relative;
+  flex-grow: 1;
+}
+.c12BarSearch:before {
+  content: "\e9c8";
+  font-family: claroicons;
+  font-size: 18px;
+  font-size: 1.125rem;
+  position: absolute;
+  left: 33px;
+  top: 10px;
+  pointer-events: none;
+  z-index: 999;
+}
+.findKeyword:disabled {
+  opacity: 40%;
+}
+@media only screen and (max-width: 760px) {
+  .c12BarSearch {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+.c12BarDrop {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+span.select {
+  box-sizing: border-box;
+  border-radius: 12px;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 180px;
+  height: 40px;
+  padding: 7px 0;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  cursor: pointer;
+}
+span.select select {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 46px 0 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+span.select:after {
+  content: "\e92e";
+  font-family: claroicons;
+  font-size: 1.1rem;
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  pointer-events: none;
+}
+@media only screen and (max-width: 760px) {
+  .c12BarDrop {
+    width: 100%;
+  }
+}
